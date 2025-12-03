@@ -1,0 +1,257 @@
+/* -------------------------------------------------------- */
+/* FONT IMPORT                                               */
+/* -------------------------------------------------------- */
+@font-face {
+  font-family: "MFPaw";
+  src: url("fonts/MFPawPrints.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* -------------------------------------------------------- */
+/* COLOR VARIABLES                                           */
+/* -------------------------------------------------------- */
+:root {
+  --primary: #ad1f4e;   /* deep red-pink */
+  --dark: #2b3f52;      /* dark blue-gray */
+  --light: #e5e8f1;     /* soft gray */
+  --green: #4ca380;     /* green-teal */
+  --radius-lg: 1rem;
+  --shadow-soft: 0 10px 25px rgba(0, 0, 0, 0.15);
+  --transition: 0.2s ease-in-out;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* -------------------------------------------------------- */
+/* TEXT / HEADINGS                                           */
+/* -------------------------------------------------------- */
+
+h1, h2, h3 {
+  font-family: "MFPaw", sans-serif; /* your requested font */
+  color: var(--primary);
+}
+
+/* -------------------------------------------------------- */
+/* LAYOUT HELPERS                                            */
+/* -------------------------------------------------------- */
+
+.container {
+  width: min(1120px, 100% - 2rem);
+  margin: 0 auto;
+}
+
+section {
+  padding: 3rem 0;
+}
+
+/* -------------------------------------------------------- */
+/* HEADER                                                    */
+/* -------------------------------------------------------- */
+
+header {
+  background: white;
+  border-bottom: 4px solid var(--primary);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.brand-logo {
+  width: 34px;
+  height: 34px;
+  background: var(--green);
+  border-radius: 50%;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+/* -------------------------------------------------------- */
+/* HERO SECTION                                              */
+/* -------------------------------------------------------- */
+
+.hero {
+  background: linear-gradient(135deg, var(--green), var(--primary));
+  color: white;
+  padding: 4rem 0 3.5rem;
+}
+
+.hero-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+
+.eyebrow {
+  color: white;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 0.7rem;
+}
+
+.highlight {
+  color: var(--light);
+}
+
+.hero-subtitle {
+  margin: 1rem 0 1.5rem;
+  font-size: 1rem;
+}
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: yellow;
+  border-radius: 50%;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* -------------------------------------------------------- */
+/* BUTTONS                                                   */
+/* -------------------------------------------------------- */
+
+.btn {
+  padding: 0.8rem 1.4rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background: white;
+  color: var(--primary);
+}
+
+.btn-primary:hover {
+  background: var(--light);
+}
+
+.btn-ghost {
+  border: 2px solid white;
+  color: white;
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* -------------------------------------------------------- */
+/* HERO CARD                                                 */
+/* -------------------------------------------------------- */
+
+.hero-card {
+  background: white;
+  color: var(--dark);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.hero-dog-photo {
+  height: 180px;
+  background-image: url("https://images.pexels.com/photos/257577/pexels-photo-257577.jpeg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero-badges {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.hero-badges span {
+  background: var(--light);
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  color: var(--dark);
+}
+
+/* -------------------------------------------------------- */
+/* FOOTER                                                    */
+/* -------------------------------------------------------- */
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.85rem;
+  color: var(--dark);
+  background: white;
+  border-top: 4px solid var(--primary);
+}
