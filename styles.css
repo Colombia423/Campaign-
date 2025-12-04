@@ -2,13 +2,12 @@
 /* COLOR VARIABLES                                           */
 /* -------------------------------------------------------- */
 :root {
-  --primary: #ad1f4e;   /* deep red-pink */
-  --dark: #2b3f52;      /* blue-gray */
-  --light: #e5e8f1;     /* soft gray */
-  --green: #4ca380;     /* teal green */
+  --primary: #ad1f4e;
+  --dark: #2b3f52;
+  --light: #e5e8f1;
+  --green: #4ca380;
   --radius-lg: 1rem;
-  --shadow-soft: 0 10px 25px rgba(0, 0, 0, 0.15);
-  --transition: 0.2s ease-in-out;
+  --shadow-soft: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 /* RESET */
@@ -29,16 +28,7 @@ img {
   max-width: 100%;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-h1, h2, h3 {
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--primary);
-}
-
+/* CONTAINER */
 .container {
   width: min(1120px, 100% - 2rem);
   margin: 0 auto;
@@ -48,15 +38,18 @@ section {
   padding: 3rem 0;
 }
 
-/* -------------------------------------------------------- */
-/* HEADER                                                    */
-/* -------------------------------------------------------- */
+/* HEADERS */
+h1, h2, h3 {
+  color: var(--primary);
+}
+
+/* NAVIGATION */
 header {
   background: white;
   border-bottom: 4px solid var(--primary);
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 20;
 }
 
 .nav {
@@ -69,9 +62,9 @@ header {
 .brand {
   display: flex;
   align-items: center;
+  color: var(--primary);
   gap: 0.5rem;
   font-weight: bold;
-  color: var(--primary);
 }
 
 .brand-logo {
@@ -80,11 +73,10 @@ header {
   background: var(--green);
   border-radius: 50%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
-/* NAVIGATION */
 .nav-links {
   display: flex;
   gap: 1.5rem;
@@ -95,17 +87,29 @@ header {
   color: var(--dark);
 }
 
-.nav-links a:hover {
-  color: var(--primary);
+/* SPOTLIGHT SECTION */
+.spotlight {
+  background: var(--light);
+  padding: 2.5rem 0;
 }
 
-/* -------------------------------------------------------- */
-/* HERO SECTION                                              */
-/* -------------------------------------------------------- */
+.spotlight-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.spotlight-img {
+  width: 260px;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-soft);
+}
+
+/* HERO SECTION */
 .hero {
   background: linear-gradient(135deg, var(--green), var(--primary));
   color: white;
-  padding: 4rem 0 3rem;
+  padding: 4rem 0;
 }
 
 .hero-grid {
@@ -120,7 +124,6 @@ header {
 }
 
 .eyebrow {
-  color: white;
   font-size: 0.85rem;
   text-transform: uppercase;
   font-weight: bold;
@@ -133,7 +136,6 @@ header {
 
 .hero-subtitle {
   margin: 1rem 0 1.5rem;
-  font-size: 1rem;
 }
 
 .hero-meta {
@@ -152,19 +154,13 @@ header {
   margin-right: 4px;
 }
 
-.hero-cta {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-/* BUTTONS */
+/* HERO BUTTONS */
 .btn {
   padding: 0.8rem 1.4rem;
   border-radius: 999px;
   cursor: pointer;
   font-weight: 600;
-  transition: var(--transition);
+  border: none;
 }
 
 .btn-primary {
@@ -172,17 +168,10 @@ header {
   color: var(--primary);
 }
 
-.btn-primary:hover {
-  background: var(--light);
-}
-
 .btn-ghost {
+  background: transparent;
   border: 2px solid white;
   color: white;
-}
-
-.btn-ghost:hover {
-  background: rgba(255, 255, 255, 0.15);
 }
 
 /* HERO CARD */
@@ -196,17 +185,17 @@ header {
 
 .hero-dog-photo {
   height: 180px;
+  border-radius: 0.8rem;
   background-image: url("https://images.pexels.com/photos/257577/pexels-photo-257577.jpeg");
   background-size: cover;
   background-position: center;
-  border-radius: 0.8rem;
   margin-bottom: 1rem;
 }
 
 .hero-badges {
   display: flex;
-  gap: 0.5rem;
   flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .hero-badges span {
@@ -216,13 +205,17 @@ header {
   font-size: 0.8rem;
 }
 
-/* -------------------------------------------------------- */
-/* PROGRAMS                                                  */
-/* -------------------------------------------------------- */
+/* BANNER SECTION */
+.banner img {
+  width: 100%;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-soft);
+}
+
+/* PROGRAMS */
 .section-desc {
   margin: 0.5rem 0 2rem;
-  font-size: 1rem;
-  color: var(--dark);
 }
 
 .program-grid {
@@ -238,14 +231,12 @@ header {
 
 .program-card {
   background: white;
-  border-radius: var(--radius-lg);
   padding: 1.5rem;
+  border-radius: var(--radius-lg);
   box-shadow: var(--shadow-soft);
 }
 
-/* -------------------------------------------------------- */
-/* HOW IT WORKS                                              */
-/* -------------------------------------------------------- */
+/* HOW IT WORKS */
 .steps-grid {
   display: grid;
   gap: 1.5rem;
@@ -264,16 +255,14 @@ header {
   box-shadow: var(--shadow-soft);
 }
 
-/* -------------------------------------------------------- */
-/* CONTACT                                                   */
-/* -------------------------------------------------------- */
+/* CONTACT SECTION */
 .contact-card {
   background: white;
   padding: 2rem;
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-soft);
   display: grid;
   gap: 1.5rem;
+  box-shadow: var(--shadow-soft);
 }
 
 @media (min-width: 768px) {
@@ -282,22 +271,23 @@ header {
   }
 }
 
-.contact-placeholder {
-  border: 1px dashed var(--dark);
-  padding: 1rem;
-  border-radius: 0.8rem;
-  text-align: center;
-  color: var(--dark);
+.poster-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* -------------------------------------------------------- */
-/* FOOTER                                                    */
-/* -------------------------------------------------------- */
+.poster-img {
+  width: 320px;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-soft);
+}
+
+/* FOOTER */
 footer {
   text-align: center;
   padding: 2rem 0;
-  font-size: 0.85rem;
-  color: var(--dark);
   background: white;
   border-top: 4px solid var(--primary);
+  color: var(--dark);
 }
