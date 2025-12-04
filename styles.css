@@ -89,7 +89,6 @@ header {
 
 /* SPOTLIGHT SECTION */
 .spotlight {
-  background: var(--light);
   padding: 2.5rem 0;
 }
 
@@ -253,6 +252,43 @@ header {
   padding: 1.5rem;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-soft);
+}
+
+/* FEATURED PETS GRID */
+#featured-pets {
+  padding: 3rem 0;
+}
+
+.featured-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.featured-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+}
+
+.featured-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.featured-card h3 {
+  margin-bottom: 0.5rem;
+  color: var(--primary);
 }
 
 /* CONTACT SECTION */
