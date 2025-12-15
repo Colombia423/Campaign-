@@ -7,7 +7,6 @@
   --shadow-soft: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -42,7 +41,7 @@ h1, h2, h3 {
   color: var(--primary);
 }
 
-/* NAV */
+/* NAVIGATION */
 header {
   background: white;
   border-bottom: 4px solid var(--primary);
@@ -61,9 +60,9 @@ header {
 .brand {
   display: flex;
   align-items: center;
+  color: var(--primary);
   gap: 0.5rem;
   font-weight: bold;
-  color: var(--primary);
 }
 
 .brand-logo {
@@ -72,13 +71,18 @@ header {
   background: var(--green);
   border-radius: 50%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .nav-links {
   display: flex;
   gap: 1.5rem;
+}
+
+.nav-links a {
+  font-weight: 600;
+  color: var(--dark);
 }
 
 /* HERO */
@@ -99,14 +103,26 @@ header {
   }
 }
 
+.eyebrow {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 0.7rem;
+}
+
 .highlight {
   color: var(--light);
+}
+
+.hero-subtitle {
+  margin: 1rem 0 1.5rem;
 }
 
 .hero-meta {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
+  margin-bottom: 1.5rem;
 }
 
 .dot {
@@ -115,13 +131,15 @@ header {
   background: yellow;
   border-radius: 50%;
   display: inline-block;
+  margin-right: 4px;
 }
 
-/* BUTTONS */
 .btn {
   padding: 0.8rem 1.4rem;
   border-radius: 999px;
+  cursor: pointer;
   font-weight: 600;
+  border: none;
 }
 
 .btn-primary {
@@ -130,13 +148,14 @@ header {
 }
 
 .btn-ghost {
+  background: transparent;
   border: 2px solid white;
   color: white;
 }
 
-/* HERO CARD */
 .hero-card {
   background: white;
+  color: var(--dark);
   padding: 1.5rem;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-soft);
@@ -144,15 +163,69 @@ header {
 
 .hero-dog-photo {
   height: 180px;
+  border-radius: 0.8rem;
+  background-image: url("https://images.pexels.com/photos/257577/pexels-photo-257577.jpeg");
   background-size: cover;
   background-position: center;
-  border-radius: 0.8rem;
+  margin-bottom: 1rem;
 }
 
-/* FEATURED PETS — FIX APPLIED HERE */
+/* BANNER */
+.banner img {
+  width: 100%;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-soft);
+}
+
+/* PROGRAMS */
+.section-desc {
+  margin: 0.5rem 0 2rem;
+}
+
+.program-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .program-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.program-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+/* HOW IT WORKS */
+.steps-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .steps-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.step-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+/* FEATURED PETS */
 .featured-grid {
   display: grid;
+  grid-template-columns: 1fr;
   gap: 2rem;
+  margin-top: 1.5rem;
 }
 
 @media (min-width: 600px) {
@@ -171,9 +244,9 @@ header {
 
 .featured-img {
   width: 100%;
-  height: 240px;              /* same height */
-  object-fit: contain;        /* NO CROPPING */
-  background: #f0f0f0;        /* fills empty space nicely */
+  height: 240px;
+  object-fit: cover;
+  object-position: top;
   border-radius: 0.8rem;
   margin-bottom: 1rem;
 }
@@ -185,6 +258,7 @@ header {
   border-radius: var(--radius-lg);
   display: grid;
   gap: 1.5rem;
+  box-shadow: var(--shadow-soft);
 }
 
 @media (min-width: 768px) {
@@ -193,7 +267,23 @@ header {
   }
 }
 
+.poster-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .poster-img {
   width: 320px;
   border-radius: 1rem;
+  box-shadow: var(--shadow-soft);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  background: white;
+  border-top: 4px solid var(--primary);
+  color: var(--dark);
 }
